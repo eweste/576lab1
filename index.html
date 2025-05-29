@@ -5,8 +5,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="" />
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.32/"></script>
+  <script
+      type="module"
+      src="https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js"
+  ></script>
+  
+  <script>  
+    require([
+      "esri/config", 
+
+      
+      
+    ], function(esriConfig, Map, MapView, BasemapGallery) {
+      
+      esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurFMjDIPc-ru-jZFtFOH_OKPiwSWHzcSf3sG-gWYqWY54-wpDqmf0rWwD2ThPO2oX9ArjzlGZjJBe5BMSHsq5gsKX8o7Z7M9ddAgHM4S9lQie95awhTLEiQKzfoqlFNUgV_RgrtgWcSEKdPTNxGtElT3G3546KDjwvKxGSYKgiIDEaphpnqgEz_py5lq8EeuYYiO9xgd6MaeLvGjCd-sRYAcePAxi5MZ0hw94qxJulHQjAT1_aPenkLzs"
+    
+
+    });  
+
+
+    
+   </script>
+
+  <style>
+    html,
+    body,
+    #viewDiv {  
+      padding: 0;  
+      margin: 0;  
+      height: 100%;  
+      width: 100%;  
+      }  
+  </style> 
 </head>
 <body>
-  <h1>Hello, world!</h1>
+  <arcgis-map basemap="topo" center="-109.04513652294386, 36.99876388222547" zoom="9">
+  <arcgis-zoom position="top-left"></arcgis-zoom>
+  <arcgis-locate position="top-left"></arcgis-locate>
+  <arcgis-basemap-gallery position="top-right"></arcgis-basemap-gallery>
+  <arcgis-search position="top-right"></arcgis-zoom>
 </body>
 </html>
