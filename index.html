@@ -20,7 +20,11 @@
       
       
     ], function(esriConfig, Map, MapView, BasemapGallery) {
-      
+      // The parameters Map, MapView, and BasemapGallery are declared here
+      // but they are not listed in the array of modules to load above (e.g., "esri/Map", "esri/views/MapView").
+      // Also, these parameters are not currently used within this function.
+    //We will use them later to create a map and view., so keep in mind they will need the modules loaded in the future. 
+    
       esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurFMjDIPc-ru-jZFtFOH_OKPiwSWHzcSf3sG-gWYqWY54-wpDqmf0rWwD2ThPO2oX9ArjzlGZjJBe5BMSHsq5gsKX8o7Z7M9ddAgHM4S9lQie95awhTLEiQKzfoqlFNUgV_RgrtgWcSEKdPTNxGtElT3G3546KDjwvKxGSYKgiIDEaphpnqgEz_py5lq8EeuYYiO9xgd6MaeLvGjCd-sRYAcePAxi5MZ0hw94qxJulHQjAT1_aPenkLzs"
     
 
@@ -46,6 +50,13 @@
   <arcgis-zoom position="top-left"></arcgis-zoom>
   <arcgis-locate position="top-left"></arcgis-locate>
   <arcgis-basemap-gallery position="top-right"></arcgis-basemap-gallery>
-  <arcgis-search position="top-right"></arcgis-zoom>
+  <!-- 
+    The following line had a typo in the closing tag.
+    It used to be </arcgis-zoom>, but it should be </arcgis-search>
+    to match the opening tag <arcgis-search ...>.
+    Think of HTML tags like pairs of parentheses or quotation marks - they need to match!
+    If they don't match, the browser might get confused and not show the webpage correctly.
+  -->
+  <arcgis-search position="top-right"></arcgis-search>
 </body>
 </html>
